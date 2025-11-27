@@ -1,1 +1,138 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tRPC-Go 文档中心</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-book"></i>
+                <span>tRPC-Go 文档中心</span>
+            </div>
+            <div class="header-actions">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="搜索文档...">
+                </div>
+                <div class="language-switch">
+                    <button id="langBtn" class="lang-btn">
+                        <i class="fas fa-language"></i>
+                        <span id="currentLang">中文</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- 侧边栏 -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>文档导航</h3>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <!-- 动态生成导航 -->
+            </nav>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="content-wrapper">
+                <article class="markdown-body" id="markdownContent">
+                    <!-- 欢迎页面 -->
+                    <div class="welcome-section">
+                        <h1 class="welcome-title">
+                            <i class="fas fa-rocket"></i>
+                            欢迎使用 tRPC-Go 文档
+                        </h1>
+                        <p class="welcome-subtitle">高性能的 Go 语言 RPC 框架</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <h3>快速开始</h3>
+                                <p>快速了解 tRPC-Go 的基本使用方法和核心概念</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <h3>用户指南</h3>
+                                <p>详细的功能说明和最佳实践指导</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3>开发者指南</h3>
+                                <p>插件开发和框架扩展的深入教程</p>
+                            </div>
+                        </div>
+
+                        <div class="quick-links">
+                            <h2><i class="fas fa-link"></i> 快速链接</h2>
+                            <div class="link-grid">
+                                <a href="#" class="link-card" data-doc="quick_start/quick_start">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>快速开始</span>
+                                </a>
+                                <a href="#" class="link-card" data-doc="quick_start/basics_tutorial">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>基础教程</span>
+                                </a>
+                                <a href="#" class="link-card" data-doc="user_guide/framework_conf">
+                                    <i class="fas fa-cog"></i>
+                                    <span>框架配置</span>
+                                </a>
+                                <a href="#" class="link-card" data-doc="quick_start/benchmark">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>性能测试</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 目录导航 -->
+                <aside class="toc" id="toc">
+                    <div class="toc-header">
+                        <h4>目录</h4>
+                    </div>
+                    <nav class="toc-nav" id="tocNav">
+                        <!-- 动态生成目录 -->
+                    </nav>
+                </aside>
+            </div>
+        </main>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/11.1.1/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="app.js" type="module"></script>
+
+    <p style="text-align: center; margin-top: 40px; padding: 20px; color: #666; font-size: 14px;">
+        由 <a href="https://with.woa.com/" style="color: #8A2BE2;" target="_blank">with</a> 通过自然语言生成
+    </p>
+</body>
+</html>
